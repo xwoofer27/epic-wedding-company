@@ -723,6 +723,58 @@
             }
         }
 
+        /* ===== LOAD MORE ===== */
+        .portfolio-item.hidden {
+            display: none;
+        }
+
+        .load-more-container {
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .load-more-btn {
+            display: inline-block;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 9px;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--text);
+            text-decoration: none;
+            border: 1px solid var(--text);
+            padding: 12px 32px;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .load-more-btn:hover {
+            background: var(--text);
+            color: var(--light);
+        }
+
+        /* ===== VIDEO SHOWCASE ===== */
+        .video-showcase {
+            padding-bottom: 80px;
+            background: var(--bg);
+        }
+
+        .video-wrapper {
+            width: 100%;
+            aspect-ratio: 21 / 9;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            pointer-events: none;
+        }
+
         /* ===== TESTIMONIALS ===== */
         .testimonials {
             padding: 80px 0;
@@ -976,8 +1028,8 @@
     <!-- ==================== MASTHEAD ==================== -->
     <header class="masthead">
         <div class="masthead-topline">
-            <span>Fine Art WeddFing Photography</span>
-            <span>Est. 2016 · Worldwide</span>
+            <span>Epic Wedding Company Photography</span>
+            <span>Est. 2012 · Worldwide</span>
             <span>By Appointment Only</span>
         </div>
         <div class="masthead-main">
@@ -999,7 +1051,7 @@
             <a href="#about">Our Story</a>
             <a href="#services">Services</a>
             <a href="#portfolio" class="nav-monogram">E✧W</a>
-            <a href="#testimonials">Kind Words</a>
+            <a href="#testimonials">Testimonials</a>
             <a href="#contact">Connect</a>
         </nav>
     </header>
@@ -1024,8 +1076,8 @@
     <div class="hero-rule-bottom"></div>
     <div class="hero-issue-line">
         <span>Vol. VIII · The Eternal Collection</span>
-        <span>300+ Weddings · 20 Countries · 8 Years</span>
-        <span>Inquiries Open for 2025 &amp; 2026</span>
+        <span>500+ Weddings · 20 Countries · 14 Years</span>
+        <span>Inquiries Open for 2026 &amp; 2027</span>
     </div>
 
     <!-- ==================== ABOUT / HISTORY ==================== -->
@@ -1124,19 +1176,86 @@
                     <img src="./images/00 (10).jpg" alt="Wedding reception">
                     <div class="portfolio-overlay"><span>Dubai, UAE</span></div>
                 </div>
+                <!-- New Hidden Images -->
+                <div class="portfolio-item hidden">
+                    <img src="./images/00 (11).jpg" alt="Wedding moments">
+                    <div class="portfolio-overlay"><span>Florence, Italy</span></div>
+                </div>
+                <div class="portfolio-item hidden">
+                    <img src="./images/00 (12).jpg" alt="Wedding moments">
+                    <div class="portfolio-overlay"><span>Venice, Italy</span></div>
+                </div>
+                <div class="portfolio-item hidden wide">
+                    <img src="./images/00 (13).jpg" alt="Wedding moments">
+                    <div class="portfolio-overlay"><span>Rome, Italy</span></div>
+                </div>
+                <div class="portfolio-item hidden">
+                    <img src="./images/00 (14).jpg" alt="Wedding moments">
+                    <div class="portfolio-overlay"><span>Milan, Italy</span></div>
+                </div>
+                <div class="portfolio-item hidden">
+                    <img src="./images/00 (15).jpg" alt="Wedding moments">
+                    <div class="portfolio-overlay"><span>Siena, Italy</span></div>
+                </div>
+                <div class="portfolio-item hidden">
+                    <img src="./images/00 (16).jpg" alt="Wedding moments">
+                    <div class="portfolio-overlay"><span>Naples, Italy</span></div>
+                </div>
+                <div class="portfolio-item hidden">
+                    <img src="./images/00 (17).jpg" alt="Wedding moments">
+                    <div class="portfolio-overlay"><span>Bologna, Italy</span></div>
+                </div>
+                <div class="portfolio-item hidden wide">
+                    <img src="./images/00 (18).jpg" alt="Wedding moments">
+                    <div class="portfolio-overlay"><span>Turin, Italy</span></div>
+                </div>
+                <div class="portfolio-item hidden">
+                    <img src="./images/00 (19).jpg" alt="Wedding moments">
+                    <div class="portfolio-overlay"><span>Genoa, Italy</span></div>
+                </div>
+                <div class="portfolio-item hidden">
+                    <img src="./images/00 (20).jpg" alt="Wedding moments">
+                    <div class="portfolio-overlay"><span>Palermo, Italy</span></div>
+                </div>
+                <div class="portfolio-item hidden">
+                    <img src="./images/00 (21).jpg" alt="Wedding moments">
+                    <div class="portfolio-overlay"><span>Verona, Italy</span></div>
+                </div>
+                <div class="portfolio-item hidden">
+                    <img src="./images/00_(1).jpg" alt="Wedding moments">
+                    <div class="portfolio-overlay"><span>Pisa, Italy</span></div>
+                </div>
+            </div>
+            <div class="load-more-container">
+                <button id="load-more-btn" class="load-more-btn">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== VIDEO PLAYBACK ==================== -->
+    <section class="video-showcase">
+        <div class="container">
+            <div class="video-wrapper">
+                <video 
+                    src="./video/Wedding_scene_preview.mp4" 
+                    autoplay 
+                    loop 
+                    muted 
+                    playsinline>
+                </video>
             </div>
         </div>
     </section>
 
     <!-- ==================== SERVICES (moved after Portfolio) ==================== -->
-    <section class="services" id="services">
+<!--   <section class="services" id="services">
         <div class="container">
             <h2 class="section-title">What We Create for You</h2>
             <p class="section-subtitle">Thoughtfully designed collections for every kind of love story.</p>
             <div class="divider"></div>
-            <div class="services-grid">
+            <div class="services-grid"> -->
                 <!-- Package 1 -->
-                <div class="service-card">
+                <!-- <div class="service-card"> 
     
                     <h3 class="service-name">The Intimate</h3>
                     <p class="service-price">From ₹20,000</p>
@@ -1149,10 +1268,10 @@
                         <li>Print release rights</li>
                     </ul>
                     <a href="#contact" class="service-cta">Begin Your Story</a>
-                </div>
+                </div> -->
 
                 <!-- Package 2 (Featured) -->
-                <div class="service-card featured">
+                <!-- <div class="service-card featured">
                     <span class="service-badge">Most Popular</span>
                     <h3 class="service-name">The Eternal</h3>
                     <p class="service-price">From ₹40,000</p>
@@ -1167,10 +1286,10 @@
                         <li>Full print release rights</li>
                     </ul>
                     <a href="#contact" class="service-cta featured-cta">Begin Your Story</a>
-                </div>
+                </div> -->
 
                 <!-- Package 3 -->
-                <div class="service-card">
+                <!-- <div class="service-card">
                     <h3 class="service-name">The Legacy</h3>
                     <p class="service-price">From ₹70,000</p>
                     <ul class="service-features">
@@ -1187,7 +1306,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- ==================== TESTIMONIALS ==================== -->
     <section class="testimonials" id="testimonials">
@@ -1310,5 +1429,21 @@
         </svg>
     </a>
 
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const loadMoreBtn = document.getElementById("load-more-btn");
+            const hiddenItems = document.querySelectorAll(".portfolio-item.hidden");
+
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener("click", function() {
+                    hiddenItems.forEach(function(item) {
+                        item.classList.remove("hidden");
+                    });
+                    loadMoreBtn.style.display = "none";
+                });
+            }
+        });
+    </script>
 </body>
 </html>
